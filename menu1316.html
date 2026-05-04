@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        select, button, input {
+            padding: 5px 10px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        #inputsContainer {
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+            white-space: pre-wrap;
+        }
+        .input-dinamico {
+            flex: 1 1 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicios JavaScript</h1>
+
+    <label for="selectEjercicio">Selecciona un ejercicio:</label>
+    <select id="selectEjercicio">
+        <option value="">--Selecciona un ejercicio--</option>
+        <option value="13">Buscar elemento en vector con while-13</option>
+        <option value="14">Invertir vector con for-14</option>
+        <option value="15">Contar elementos pares en vector con for-15</option>
+        <option value="16">Promedio de elementos de vector con for-16</option>
+    </select>
+
+    <div id="inputsContainer"></div>
+    
+    <button id="botonEjecutar">Ejecutar</button>
+
+    <div id="resultado"></div>
+
+
+    <script type="module" src="menu1316.js"></script>
+
+</body>
+</html>
+
+
