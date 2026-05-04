@@ -1,7 +1,4 @@
-import { procesarBusqueda as ejercicio13 } from "./ejercicio13.js";
-import { reverseArray as ejercicio14 } from "./ejercicio14.js";
-import { countEvenNumbers as ejercicio15 } from "./ejercicio15.js";
-import { calculateAverage as ejercicio16 } from "./ejercicio16.js";
+import * as ejercicios from "./src/js/EJERCICIOS.JS";
 
 const selectEjercicio = document.getElementById("selectEjercicio");
 const botonEjecutar = document.getElementById("botonEjecutar");
