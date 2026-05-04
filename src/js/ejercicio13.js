@@ -9,6 +9,17 @@ export function procesarBusqueda() {
     document.getElementById("resultado").innerHTML = resultado;
 }
 
+function procesarTexto(texto) {
+  return texto.toUpperCase(); // ejemplo
+}
+
+module.exports = procesarTexto;
+
+function procesarBusqueda() {
+  let dataText = document.getElementById("dataInput").value;
+  return procesarTexto(dataText);
+}
+
 function searchInArray(data, value) {
     let i = 0;
 
