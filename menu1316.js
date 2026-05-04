@@ -1,4 +1,4 @@
-import * as ejercicios from "./js/EJERCICIOS.JS";
+import * as ejercicios from "./public/js/EJERCICIOS.JS";
 
 const selectEjercicio = document.getElementById("selectEjercicio");
 const botonEjecutar = document.getElementById("botonEjecutar");
@@ -27,7 +27,7 @@ function generarInputs(valor) {
 
     switch (valor) {
 
-        
+
         case "13":
             document.body.insertBefore(crearInput("dataInput", "Datos separados por coma"), botonEjecutar);
             document.body.insertBefore(crearInput("searchInput", "Elemento a buscar"), botonEjecutar);
