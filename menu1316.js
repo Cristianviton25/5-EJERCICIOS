@@ -1,4 +1,4 @@
-import * as ejercicios from "./src/js/EJERCICIOS.JS";
+import * as ejercicios from "./src/js/EJERCICIOS.js";
 
 const selectEjercicio = document.getElementById("selectEjercicio");
 const botonEjecutar = document.getElementById("botonEjecutar");
