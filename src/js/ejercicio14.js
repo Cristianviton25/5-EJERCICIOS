@@ -1,19 +1,27 @@
-export function reverseArray() {
-    const input = document.getElementById("arrayInput14").value;
-
+// 🔹 FUNCIÓN PURA (TESTEABLE)
+export function reverseArrayLogic(input) {
     if (!input) {
-        document.getElementById("resultado").innerHTML = "Ingresa números válidos.";
-        return;
+        return "Ingresa números válidos.";
     }
 
     const array = input.split(",").map(num => num.trim());
-
     const invertido = [];
 
     for (let i = array.length - 1; i >= 0; i--) {
         invertido.push(array[i]);
     }
 
-    document.getElementById("resultado").innerHTML =
-        `Vector invertido: [ ${invertido.join(", ")} ]`;
+    return `Vector invertido: [ ${invertido.join(", ")} ]`;
+}
+
+
+// 🔹 FUNCIÓN ORIGINAL (SIGUE FUNCIONANDO EN TU HTML)
+export function reverseArray() {
+    if (typeof document === "undefined") return;
+
+    const input = document.getElementById("arrayInput14").value;
+
+    const resultado = reverseArrayLogic(input);
+
+    document.getElementById("resultado").innerHTML = resultado;
 }
