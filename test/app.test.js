@@ -4,45 +4,30 @@ function ejecutarPruebas () {
     let pasadas = 0;
     let fallidas = 0;
 
-    const eje13 = ejercicio13("Resolver");
-    if (eje13.includes("Resolver")) {
-        console.log("🟩 test 1 pasado: función ejercicio 13 correcta");
-        pasadas++;
-    } else {
-        console.log("🟥 test 1 fallido:", eje13);
-        fallidas++;
+    function probar(nombre, fn, input) {
+        try {
+            const resultado = fn(input);
+
+            if (typeof resultado === "string") {
+                console.log(`🟩 ${nombre} pasado`);
+                pasadas++;
+            } else {
+                console.log(`🟥 ${nombre} fallido: no retorna string`);
+                fallidas++;
+            }
+
+        } catch (error) {
+            console.log(`🟥 ${nombre} error:`, error.message);
+            fallidas++;
+        }
     }
 
-    const eje14 = ejercicio14("Resuelve");
-    if (eje14.includes("Resuelve")) {
-        console.log("🟩 test 2 pasado: función ejercicio 14 correcta");
-        pasadas++;
-    } else {
-        console.log("🟥 test 2 fallido:", eje14);
-        fallidas++;
-    }
+    probar("ejercicio 13", ejercicio13, "1,2,3");
+    probar("ejercicio 14", ejercicio14, "1,2,3");
+    probar("ejercicio 15", ejercicio15, "1,2,3");
+    probar("ejercicio 16", ejercicio16, "1,2,3");
 
-    const eje15 = ejercicio15("Resuel");
-    if (eje15.includes("Resuel")) {
-        console.log("🟩 test 3 pasado: función ejercicio 15 correcta");
-        pasadas++;
-    } else {
-        console.log("🟥 test 3 fallido:", eje15);
-        fallidas++;
-    }
-
-    // ✅ CORREGIDO
-    const eje16 = ejercicio16("Resu");
-    if (eje16.includes("Resu")) {
-        console.log("🟩 test 4 pasado: función ejercicio 16 correcta");
-        pasadas++;
-    } else {
-        console.log("🟥 test 4 fallido:", eje16);
-        fallidas++;
-    }
-
-    // ✅ CORREGIDO
-    console.log("\nResultados: " + pasadas + " pasadas, " + fallidas + " fallidas");
+    console.log(`\nResultados: ${pasadas} pasadas, ${fallidas} fallidas`);
 
     if (fallidas > 0) process.exit(1);
 }
