@@ -1,5 +1,5 @@
-// 🔹 FUNCIÓN PURA (TESTEABLE)
-export function reverseArrayLogic(input) {
+// ✅ LÓGICA
+export function ejercicio14(input) {
     if (!input) {
         return "Ingresa números válidos.";
     }
@@ -15,13 +15,12 @@ export function reverseArrayLogic(input) {
 }
 
 
-// 🔹 FUNCIÓN ORIGINAL (SIGUE FUNCIONANDO EN TU HTML)
-export function reverseArray() {
+// ✅ DOM (para tu página)
+export function ejercicio14HTML() {
     if (typeof document === "undefined") return;
 
     const input = document.getElementById("arrayInput14").value;
-
-    const resultado = reverseArrayLogic(input);
+    const resultado = ejercicio14(input);
 
     document.getElementById("resultado").innerHTML = resultado;
 }
