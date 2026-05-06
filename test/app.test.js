@@ -10,11 +10,11 @@ function ejecutarPruebas () {
         pasadas ++;
     } else {
         console.log("🟥 test 1 fallido:", eje13);
-        fallidas++;
+        fallidas ++;
     }
 
     const eje14 = ejercicio14("Resuelve")
-    if (eje14.includes("Resuelve")){
+    if (eje14.includes("Resuelve")) {
         console.log("🟩 test 2 pasado: función ejercicio 14 correcta");
         pasadas ++;
     } else {
