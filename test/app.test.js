@@ -31,7 +31,7 @@ function ejecutarPruebas () {
         fallidas ++;
     }
 
-    const eje16 = ejercicio14("Resu")
+    const eje16 = ejercicio16("Resu")
     if (eje16.includes("Resu")){
         console.log("🟩 test 4 pasado: función ejercicio 16 correcta");
         pasadas ++;
