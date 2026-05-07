@@ -1,20 +1,28 @@
 // 🔹 LÓGICA (testeable)
 export function procesarBusqueda(dataText, searchValue) {
+
     let array = dataText.split(",").map(Number);
+
     return searchInArray(array, searchValue);
 }
 
 export function searchInArray(data, value) {
+
     let i = 0;
 
     while (i < data.length) {
+
         if (data[i] === value) {
-            return "Elemento encontrado en la posición: " + i;
+
+            // ✅ devuelve la solución
+            return "✅ Elemento encontrado en la posición: " + i;
         }
+
         i++;
     }
 
-    return "El elemento no se encuentra en el vector.";
+    // ✅ solución cuando no existe
+    return "❌ El elemento no se encuentra en el vector.";
 }
 
 
@@ -23,16 +31,17 @@ export function procesarBusquedaDesdeHTML() {
 
     if (typeof document === "undefined") return;
 
-    let dataText = document.getElementById("dataInput").value;
-    let searchValue = parseInt(document.getElementById("searchInput").value);
+    let dataText =
+        document.getElementById("dataInput").value;
 
-    let resultado = procesarBusqueda(dataText, searchValue);
+    let searchValue =
+        parseInt(document.getElementById("searchInput").value);
 
-    document.getElementById("resultado").innerHTML = resultado;
-}
+    // ✅ obtiene el resultado
+    let resultado =
+        procesarBusqueda(dataText, searchValue);
 
-
-// ✅ HACE FUNCIONAR EL BOTÓN EN HTML
-if (typeof window !== "undefined") {
-    window.procesarBusqueda = procesarBusquedaDesdeHTML;
+    // ✅ muestra la solución en pantalla
+    document.getElementById("resultado").innerHTML =
+        resultado;
 }
