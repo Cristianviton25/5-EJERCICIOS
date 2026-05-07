@@ -1,4 +1,3 @@
-
 // 🔹 LÓGICA (testeable)
 export function procesarBusqueda(dataText, searchValue) {
     let array = dataText.split(",").map(Number);
@@ -21,6 +20,7 @@ export function searchInArray(data, value) {
 
 // 🔹 DOM (solo navegador)
 export function procesarBusquedaDesdeHTML() {
+
     if (typeof document === "undefined") return;
 
     let dataText = document.getElementById("dataInput").value;
@@ -29,4 +29,10 @@ export function procesarBusquedaDesdeHTML() {
     let resultado = procesarBusqueda(dataText, searchValue);
 
     document.getElementById("resultado").innerHTML = resultado;
+}
+
+
+// ✅ HACE FUNCIONAR EL BOTÓN EN HTML
+if (typeof window !== "undefined") {
+    window.procesarBusqueda = procesarBusquedaDesdeHTML;
 }
